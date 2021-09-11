@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------------------- */
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);   
+    font-family: 'Red Hat Display', sans-serif;   
+}
+
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    margin:0;
+    padding:0;      
+}
+
+body {    
+    min-height: 100vh;
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-color: var(--Pale-blue);    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;      
+}
+
+main {    
+    max-width: 90%;     
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;  
+    margin-bottom: 20px;  
+}
+
+img {
+    max-width: 100%;
+    /* height: auto; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h1 {
+    margin:2.5rem 0 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--Dark-blue);   
+}
+
+p {
+    margin:2.5rem 0 1.5rem 0;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    padding: 0 35px;
+    line-height: 1.5rem;    
+}
+
+.plan {
+    background-color: var(--Very-pale-blue);
+    width: 90%;
+    margin:2.5rem auto 1.5rem auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    /* margin-bottom: 1.5rem */
+}
+
+
+ul {
+    margin: auto 0;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+
+}
+
+li:first-of-type {
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: var(--Dark-blue);
+}
+
+li:last-of-type {
+    color: var(--Desaturated-blue);
+}
+
+.plan a {
+    margin: auto 0;
+    font-weight: 700;
+}
+
+.proceed-to-payment {
+    background-color: var(--Bright-blue);
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 900;
+}
+    
+
+.proceed-to-payment a {
+    text-decoration: none;
+    color: var(--Very-pale-blue);
+}
+
+
+.cancel-order {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    font-weight: 900;    
+    margin: 1rem auto 1.5rem auto;
+}
+
+.cancel-order a  {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+
+@media (min-width: 400px) {
+    main {
+        max-width: 400px;
+    }
+
+    .plan {
+        width: 80%;
+    }
+
+    .proceed-to-payment {
+        width: 80%;
+    }
+
+    .cancel-order {
+        width: 80%
+    }
+}
